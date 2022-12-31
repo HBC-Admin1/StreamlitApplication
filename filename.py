@@ -52,4 +52,17 @@ if(st.button("Run Cost Estimate")):
     st.text("Submitting form details...")
     time.sleep(3)
     st.text("Your information has been submitted.")
+    st.balloons()
+
+
+
+
+
+
+
+
+
+
+
+
 
