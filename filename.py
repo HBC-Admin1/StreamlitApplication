@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit_folium as st_folium
 from streamlit_folium import folium_static
+import numpy as np
 import folium
 import time
 
@@ -47,9 +48,15 @@ hospital = st.selectbox("Hospital: ",
                         ['Wesley Medical Center','Via Christi St. Joseph'])
 st.write("Your hospital is: ", hospital)
 
+coordinatesWesley = [37.695617, -97.298899]
+coordinatesStFrancis = [37.700267, -97.332263]
+
+midpoint = np.array((coordinatesWesley) + np.array(coordinatesStFrancis)) /2
+
+zoomLevel = (radius/100) + 12
 
 def draw_map():
-    m = folium.Map(location=[37.695617, -97.298899], zoom_start=12)
+    m = folium.Map(location=midpoint, zoom_start=zoomLevel)
 
     folium.Marker(
         [37.695617, -97.298899],
