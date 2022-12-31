@@ -48,25 +48,25 @@ hospital = st.selectbox("Hospital: ",
 st.write("Your hospital is: ", hospital)
 
 
+def draw_map():
+    m = folium.Map(location=[37.695617, -97.298899], zoom_start=12)
 
-m = folium.Map(location=[37.695617, -97.298899], zoom_start=12)
+    folium.Marker(
+        [37.695617, -97.298899],
+        popup="Wesley Medical Center",
+        tooltip="Wesley Medical Center"
+    ).add_to(m)
 
-folium.Marker(
-    [37.695617, -97.298899],
-    popup="Wesley Medical Center",
-    tooltip="Wesley Medical Center"
-).add_to(m)
-
-folium.Marker(
-    [37.700267, -97.332263],
-    popup="Ascension Via Christi St. Francis",
-    tooltip="Ascension Via Christi St. Francis"    
-).add_to(m)
+    folium.Marker(
+        [37.700267, -97.332263],
+        popup="Ascension Via Christi St. Francis",
+        tooltip="Ascension Via Christi St. Francis"    
+    ).add_to(m)
 
 
-#st_data = st_folium(m, width=725)
+    #st_data = st_folium(m, width=725)
 
-folium_static(m)
+    folium_static(m)
 
 #This section will control the button actions.
 
