@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit_folium as st_folium
 from streamlit_folium import folium_static
+from streamlit_disqus import st_disqus
 import numpy as np
 import folium
 import time
@@ -10,7 +11,11 @@ import time
 #the user how to navigate the form.
 
 st.title("Procedure Cost Lookup")
+st.write("#")
+st.write("#")
 st.header("Use this to estimate your real cost for care at any given facility. Compare prices and select the provider of highest value to you.")
+st.write("#")
+st.write("#")
 st.subheader("Please enter your details below.")
 
 '''
@@ -77,22 +82,16 @@ def draw_map():
 
 #This section will control the button actions.
 
+
+
 if(st.button("Run Cost Estimate")):
     st.text("Submitting form details...")
     time.sleep(3)
     st.text("Your information has been submitted.")
     draw_map()
 
+st.write("#")
+st.write("#")
+st.write("#")
 
-
-
-
-
-
-
-
-
-
-
-
-
+st_disqus("streamlit-disqus-demo")
