@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit_folium as st_folium
 from streamlit_folium import folium_static
-from streamlit_disqus import st_disqus
+#from streamlit_disqus import st_disqus
 import numpy as np
 import folium
 import time
@@ -94,4 +94,4 @@ st.write("#")
 st.write("#")
 st.write("#")
 
-st_disqus("streamlit-disqus-demo")
+#st_disqus("streamlit-disqus-demo")
